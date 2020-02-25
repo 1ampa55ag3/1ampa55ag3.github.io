@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="LeseTruck" type="application/atom+xml">
 
@@ -81,13 +83,19 @@
 
 
 
+<meta name="description" content="This project have ceased to maintenance, welcome to try the new theme hexo-theme-apollo.   Install123$ hexo init Blog &amp;amp;&amp;amp; cd Blog &amp;amp;&amp;amp; npm install$ npm install --save hexo-renderer-jade">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LeseTruck">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/README.html">
 <meta property="og:site_name" content="LeseTruck">
+<meta property="og:description" content="This project have ceased to maintenance, welcome to try the new theme hexo-theme-apollo.   Install123$ hexo init Blog &amp;amp;&amp;amp; cd Blog &amp;amp;&amp;amp; npm install$ npm install --save hexo-renderer-jade">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/9530963/10627194/0ceeb9bc-77e9-11e5-918b-c978d444bbd3.png">
+<meta property="og:updated_time" content="2019-05-02T15:41:28.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeseTruck">
+<meta name="twitter:description" content="This project have ceased to maintenance, welcome to try the new theme hexo-theme-apollo.   Install123$ hexo init Blog &amp;amp;&amp;amp; cd Blog &amp;amp;&amp;amp; npm install$ npm install --save hexo-renderer-jade">
+<meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/9530963/10627194/0ceeb9bc-77e9-11e5-918b-c978d444bbd3.png">
 
 
 
@@ -117,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/README.html">
 
 
 
 
 
-  <title>Archive | LeseTruck</title>
+  <title> | LeseTruck</title>
   
 
 
@@ -161,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,107 +243,55 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 2 posts in total. Keep on posting.
-      </span>
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
+        
+        
+          <blockquote>
+<p>This project have ceased to maintenance, welcome to try the new theme <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="noopener">hexo-theme-apollo</a>.</p>
+</blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/9530963/10627194/0ceeb9bc-77e9-11e5-918b-c978d444bbd3.png" alt="hexo-theme-jekyll-screenshot"></p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init Blog &amp;&amp; <span class="built_in">cd</span> Blog &amp;&amp; npm install</span><br><span class="line">$ npm install --save hexo-renderer-jade hexo-generator-feed</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/pinggod/hexo-theme-jekyll.git themes/jekyll</span><br></pre></td></tr></table></figure>
+<h2 id="Enable"><a href="#Enable" class="headerlink" title="Enable"></a>Enable</h2><p>Modify <code>theme</code> setting in site’s <code>_config.yml</code> to <code>jekyll</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">jekyll</span></span><br></pre></td></tr></table></figure>
+<p>And add some related settings in the site’s <code>_config.yml</code> as well:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">/atom.xml</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jekyll:</span></span><br><span class="line"><span class="attr">  project:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  selfIntro:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  sign_image:</span> <span class="string">image/bear.svg</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Social</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line"><span class="attr">  github:</span> <span class="attr">https://github.com/xxxxxx</span></span><br><span class="line"><span class="attr">  coding:</span> <span class="attr">https://coding.net/u/xxxxxx</span></span><br><span class="line"><span class="attr">  weibo:</span> <span class="attr">http://weibo.com/xxxxxx</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Analytics</span></span><br><span class="line"><span class="attr">google_analytics:</span> <span class="string">UA-80781234-1</span></span><br><span class="line"><span class="attr">baidu_analytics:</span> <span class="string">//hm.baidu.com/hm.js?ee75cf111111aa99f8540efa2570970</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>feed</code> key is for the RSS/Atom generator, a feed generator plugin should be installed, such as <code>hexo-generator-feed</code>;</li>
+<li><code>jekyll</code> is to control what sections to show on the index page, <code>sign_image</code> is the sign image link;</li>
+<li><code>social</code> contains a list of social network links;</li>
+<li><code>google_analytics</code> and <code>baidu_analytics</code> are for analytics script code for Google Analytics and Baidu Analytics.</li>
+</ul>
+<h2 id="Add-Demo-md"><a href="#Add-Demo-md" class="headerlink" title="Add Demo.md"></a>Add Demo.md</h2><p>For better experience, you can remove default demo markdown file by using the follow command and add another markdown file provided by this theme:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm <span class="built_in">source</span>/_posts/hello-world.md &amp;&amp; mv themes/jekyll/.post/demo.md <span class="built_in">source</span>/_posts</span><br></pre></td></tr></table></figure>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
 
         
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/02/25/2020-Spring-网络授课方式汇总-1/" itemprop="url">
-              
-                <span itemprop="name">2020-Spring 网络授课方式汇总</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-25T20:50:00+08:00" content="2020-02-25">
-          02-25
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/02/25/数据库系统概述/" itemprop="url">
-              
-                <span itemprop="name">数据库系统概述</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-25T20:47:00+08:00" content="2020-02-25">
-          02-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
     </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -343,6 +299,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -363,8 +323,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -453,6 +422,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install"><span class="nav-number">1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Enable"><span class="nav-number">2.</span> <span class="nav-text">Enable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Demo-md"><span class="nav-number">3.</span> <span class="nav-text">Add Demo.md</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run"><span class="nav-number">4.</span> <span class="nav-text">Run</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#License"><span class="nav-number">5.</span> <span class="nav-text">License</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -586,6 +571,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
