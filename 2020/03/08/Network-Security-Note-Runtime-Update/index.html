@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Network Security,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LeseTruck" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Chapter 1TerminologyEncryption        加密Decryption        解密Cryptography    密码学Confidentiality    机密性Integrity            完整性Availability        可用性Element            元素Threat            威胁  Computer">
+<meta name="keywords" content="Network Security">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Network Security Note(Runtime Update)">
+<meta property="og:url" content="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/index.html">
+<meta property="og:site_name" content="LeseTruck">
+<meta property="og:description" content="Chapter 1TerminologyEncryption        加密Decryption        解密Cryptography    密码学Confidentiality    机密性Integrity            完整性Availability        可用性Element            元素Threat            威胁  Computer">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8842916.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8843013.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8843858.jpg">
+<meta property="og:updated_time" content="2020-03-08T14:09:27.107Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Network Security Note(Runtime Update)">
+<meta name="twitter:description" content="Chapter 1TerminologyEncryption        加密Decryption        解密Cryptography    密码学Confidentiality    机密性Integrity            完整性Availability        可用性Element            元素Threat            威胁  Computer">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8842916.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/">
+
+
+
+
+
+  <title>Network Security Note(Runtime Update) | LeseTruck</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-80781234-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?//hm.baidu.com/hm.js?ee75cf111111aa99f8540efa2570970";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LeseTruck</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/08/Network-Security-Note-Runtime-Update/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1ampa55ag3">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeseTruck">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Network Security Note(Runtime Update)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-08T22:08:00+08:00">
+                2020-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2><p>Encryption        加密<br>Decryption        解密<br>Cryptography    密码学<br>Confidentiality    机密性<br>Integrity            完整性<br>Availability        可用性<br>Element            元素<br>Threat            威胁</p>
+<hr>
+<h2 id="Computer-Security"><a href="#Computer-Security" class="headerlink" title="Computer Security"></a>Computer Security</h2><p>Preserve the <em>Integrity</em>,<em>Availability</em> and <em>Confidentiality</em> of information system resources (includes hardware,software,firmware,information/data,and telecommunications)</p>
+<h2 id="Three-Key-Objectives"><a href="#Three-Key-Objectives" class="headerlink" title="Three Key Objectives"></a>Three Key Objectives</h2><h3 id="Confidentiality"><a href="#Confidentiality" class="headerlink" title="Confidentiality"></a>Confidentiality</h3><ul>
+<li>Data</li>
+<li>Privacy<h3 id="Integrity"><a href="#Integrity" class="headerlink" title="Integrity"></a>Integrity</h3></li>
+<li>Data integrity</li>
+<li>System integrity<h3 id="Availability"><a href="#Availability" class="headerlink" title="Availability"></a>Availability</h3><h3 id="Additional-concepts"><a href="#Additional-concepts" class="headerlink" title="Additional concepts"></a>Additional concepts</h3></li>
+<li>Authenticity</li>
+<li>Accountability 可溯源</li>
+</ul>
+<hr>
+<h2 id="OSI-Security-Architecture"><a href="#OSI-Security-Architecture" class="headerlink" title="OSI Security Architecture"></a>OSI Security Architecture</h2><h2 id="Aspects-of-Security"><a href="#Aspects-of-Security" class="headerlink" title="Aspects of Security"></a>Aspects of Security</h2><ul>
+<li>Security attack</li>
+<li>Security mechanism: detect,prevent,recover</li>
+<li>Security service</li>
+</ul>
+<hr>
+<p>1️⃣ <strong>Security Attack</strong></p>
+<h3 id="Passive-Attack"><a href="#Passive-Attack" class="headerlink" title="Passive Attack"></a>Passive Attack</h3><blockquote>
+<p>Do not affect system resources , just eavesdropping &amp; monitoring  </p>
+<ul>
+<li>Release of Message Contents</li>
+<li>Traffic Analysis<br><strong>Why Difficult to detect</strong></li>
+<li>Message transmission  apparently normal</li>
+<li>Emphasis on prevention rather than detection=&gt;Encryption</li>
+</ul>
+</blockquote>
+<h3 id="Active-Attack"><a href="#Active-Attack" class="headerlink" title="Active Attack"></a>Active Attack</h3><blockquote>
+<p>Try to alter system resources or affect their operation  </p>
+<ul>
+<li>Masquerade（伪装）</li>
+<li>Replay=&gt;use nonce to prevent </li>
+<li>Modification of Messages</li>
+<li>Denial of Service(DoS)<br><strong>Difficult to prevent</strong></li>
+<li>The goal is to detect and recover</li>
+</ul>
+</blockquote>
+<hr>
+<p>2⃣️ <strong>Security Service</strong></p>
+<blockquote>
+<p>1.Enhance security of data processing systems and information transfers of an organization<br>2.Intended tp counter security attack<br>3.Using one or more security mechanisms<br>4.Often replicates functions normally associated with physical documents<code>signatures,dates...</code>  </p>
+</blockquote>
+<h3 id="X-800"><a href="#X-800" class="headerlink" title="X.800"></a>X.800</h3><ul>
+<li>Authentication=&gt;<em>assurance that communicating entity is the one claimed</em></li>
+<li>Access Control=&gt;<em>prevention of the unauthorized use of a resource</em></li>
+<li>Data Confidentiality=&gt;<em>protection of data from unauthorized disclosure</em></li>
+<li>Data Integrity=&gt;<em>assurance that data received is as sent by an authorized entity</em></li>
+<li>Non-Repudiation=&gt;<em>protection against denial by one of the parties in a communication</em></li>
+<li>Availability=&gt;<em>resource accessible/usable</em></li>
+</ul>
+<hr>
+<p>3️⃣ <strong>Security Mechanism</strong></p>
+<blockquote>
+<p>1.Designed to <strong>Detect,Prevent,Recover from a security attack</strong><br>2.No single mechanism that will support all services required<br>3.One particular element underlies many use of the mechanisms in use:<strong>Cryptographic techniques</strong><br>4.Hence our focus on this topic  </p>
+</blockquote>
+<hr>
+<p><img src="%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8842916.jpg" alt></p>
+<hr>
+<h2 id="Model-for-Network-Security"><a href="#Model-for-Network-Security" class="headerlink" title="Model for Network Security"></a>Model for Network Security</h2><blockquote>
+<p><img src="%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8843013.jpg" alt>  </p>
+</blockquote>
+<h3 id="Requirements-of-this-model"><a href="#Requirements-of-this-model" class="headerlink" title="Requirements of this model"></a>Requirements of this model</h3><ol>
+<li>Design a suitable <strong>algorithm</strong> for the security transformation;</li>
+<li>Generate the <strong>secret information(keys)</strong> used by the algorithm;</li>
+<li>Develop methods to <strong>distribute and share</strong> the secret information;</li>
+<li>Specify a <strong>protocol</strong> enabling the principals to use the transformation and secret information for a security service.</li>
+</ol>
+<hr>
+<h2 id="Model-for-Network-Access-Security"><a href="#Model-for-Network-Access-Security" class="headerlink" title="Model for Network Access Security"></a>Model for Network Access Security</h2><blockquote>
+<p><img src="%23Network-Security/%E7%85%A7%E7%89%87%202020%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8843858.jpg" alt>  </p>
+</blockquote>
+<hr>
+<h3 id="Requirements-of-this-model-1"><a href="#Requirements-of-this-model-1" class="headerlink" title="Requirements of this model"></a>Requirements of this model</h3><ol>
+<li>Select appropriate <strong>gatekeeper functions</strong> to identify users;</li>
+<li>Implement <strong>security controls</strong> to ensure only authorized users access designated information or resources.</li>
+</ol>
+<hr>
+<h2 id="Standards"><a href="#Standards" class="headerlink" title="Standards"></a>Standards</h2><ul>
+<li><strong>NIST</strong>(National Institute of Standards and Technology)<ul>
+<li><strong>FIPS</strong>  Federal Information Processing Standards</li>
+<li><strong>SP</strong>  Special Publications</li>
+</ul>
+</li>
+<li><strong>ISOC</strong> Internet Society<ul>
+<li><strong>Home for IETF</strong>(Internet Engineering Task Force) and <strong>IAB</strong>(Internet Architecture Board)</li>
+<li><strong>RFCs</strong>  Requests for Comments</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Cisco-Courses-Network-Attacks-A-Deeper-Look"><a href="#Cisco-Courses-Network-Attacks-A-Deeper-Look" class="headerlink" title="Cisco Courses-Network Attacks : A Deeper Look"></a>Cisco Courses-Network Attacks : A Deeper Look</h1><h2 id="Network-Monitoring-Methods"><a href="#Network-Monitoring-Methods" class="headerlink" title="Network Monitoring Methods"></a>Network Monitoring Methods</h2><h3 id="Traffic-Information-capture-methods"><a href="#Traffic-Information-capture-methods" class="headerlink" title="Traffic Information capture methods"></a>Traffic Information capture methods</h3><ul>
+<li><strong>Network TAPs</strong></li>
+<li><strong>Port mirroring</strong></li>
+</ul>
+<hr>
+<h3 id="Network-TAPs"><a href="#Network-TAPs" class="headerlink" title="Network TAPs"></a>Network TAPs</h3><blockquote>
+<p>1.A passive splitting device implemented inline between a device of interest and the network.<br>2.A tap forwards all traffic including physical layer errors to an analysis device.<br>3.If it fails or loses power,traffic between the firewall and internal router is not affected.  </p>
+</blockquote>
+<h3 id="Traffic-Mirroring-and-SPAN"><a href="#Traffic-Mirroring-and-SPAN" class="headerlink" title="Traffic Mirroring and SPAN"></a>Traffic Mirroring and SPAN</h3><blockquote>
+<p>Enables the switch to copy frames of one or more ports to a <strong>Switch Port Analyzer(SPAN)</strong> port connected to an analysis device.  </p>
+</blockquote>
+<h3 id="Network-Security-Monitoring-Tools"><a href="#Network-Security-Monitoring-Tools" class="headerlink" title="Network Security Monitoring Tools"></a>Network Security Monitoring Tools</h3><ol>
+<li><strong>Protocol Analyzers</strong>=&gt;Capture traffic <em>like Wireshark,Tcpdump,etc..</em></li>
+<li><strong>NetFlow</strong>=&gt;Provides a complete audit trail of basic information about every IP flow forwarded on a device</li>
+<li><strong>SIEM</strong>=&gt;Security Information Event Management system</li>
+<li><strong>SNMP</strong>=&gt;Simple Network Management Protocol</li>
+</ol>
+<hr>
+<h2 id="Attacking-the-Foundation"><a href="#Attacking-the-Foundation" class="headerlink" title="Attacking the Foundation"></a>Attacking the Foundation</h2><h3 id="IP-Vulnerabilities"><a href="#IP-Vulnerabilities" class="headerlink" title="IP Vulnerabilities"></a>IP Vulnerabilities</h3><ol>
+<li>ICMP Attacks<blockquote>
+<p>ICMP was developed to carry diagnostic messages and to report error conditions when routes,hosts,and ports are unavailable.=&gt;<strong>Ping of Death &amp; ICMP Flood</strong>  </p>
+</blockquote>
+</li>
+<li>DoS and DDoS Attacks<blockquote>
+<p>Prevent legitimate users from gaining access to websites,email,online accounts,and other services;<br><strong>DDoS</strong>=&gt;Larger in magnitude than a DoS attack,attacks introduced new terms such as botnet,handler systems,and zombie computers.  </p>
+</blockquote>
+</li>
+<li>Address Spoofing<blockquote>
+<p>A threat actor creates packets with false source IP address information to either hide the identity of the sender or to pose as another legitimate user,then can gain access to otherwise inaccessible data or circumvent security configurations.  </p>
+</blockquote>
+</li>
+<li>MITM(Man in the middle) Attacks</li>
+<li>Session Hijacking<h3 id="TCP-and-UDP-Vulnerabilities"><a href="#TCP-and-UDP-Vulnerabilities" class="headerlink" title="TCP and UDP Vulnerabilities"></a>TCP and UDP Vulnerabilities</h3><blockquote>
+<p><strong>TCP Provides</strong> <em>Reliable Delivery</em>,<em>Flow Control</em>,<em>Stateful Communication</em>.<br><strong>TCP</strong> attacks target expected <strong>protocol behaviors</strong></p>
+</blockquote>
+</li>
+<li>TCP SYN flood attack</li>
+<li>TCP reset attack</li>
+<li>TCP session hijacking<blockquote>
+<p><strong>UDP</strong>=&gt;A simple protocol that provides the basic transport layer functions,Connectionless,Lack of encryption<br><strong>UDP</strong> protocol attacks target the lack of protocol behaviors</p>
+</blockquote>
+</li>
+<li>UDP checksum attack</li>
+<li>UDP flood attack</li>
+<li>UDP DoS attacks</li>
+</ol>
+<hr>
+<h2 id="Attacking-What-We-Do"><a href="#Attacking-What-We-Do" class="headerlink" title="Attacking What We Do"></a>Attacking What We Do</h2><h2 id="IP-Service-👇"><a href="#IP-Service-👇" class="headerlink" title="IP Service 👇"></a>IP Service 👇</h2><h3 id="ARP-Vulnerabilities-gt-ARP-Cache-Poisoning"><a href="#ARP-Vulnerabilities-gt-ARP-Cache-Poisoning" class="headerlink" title="ARP Vulnerabilities=&gt;ARP Cache Poisoning"></a>ARP Vulnerabilities=&gt;ARP Cache Poisoning</h3><blockquote>
+<p>ARP cache poisoning attacks deliberately poison the cache of another computer with spoofed IP address to MAC address mappings.  </p>
+</blockquote>
+<h3 id="DNS-Attacks"><a href="#DNS-Attacks" class="headerlink" title="DNS Attacks"></a>DNS Attacks</h3><ol>
+<li>DNS Open Resolvers(public name servers)</li>
+<li>DNS Stealth Attacks</li>
+<li>DNS Shadowing Attacks=&gt;Hijacked domains are used to create subdomains which are used to resolve to malicious web sites.</li>
+<li>DNS tunneling Attacks=&gt;Hides malicious instructions inside DNS queries and responses.<blockquote>
+<p>Use DNS tunneling place non-DNS traffic within DNS traffic to <strong>circumvents</strong>(规避) security solutions,and the different types of DNS records such as TXT,MX,SRV,NULL,A or CNAME are altered.  </p>
+</blockquote>
+<h3 id="DHCP-Attack"><a href="#DHCP-Attack" class="headerlink" title="DHCP Attack"></a>DHCP Attack</h3><blockquote>
+<p>Could result in every host on the network communication with malicious DNS servers and gateways.A DHCP spoofing attack creates a rouge DHCP server to serve falsified information.  </p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="Enterprise-Services👇"><a href="#Enterprise-Services👇" class="headerlink" title="Enterprise Services👇"></a>Enterprise Services👇</h2><h3 id="HTTP-amp-HTTPS"><a href="#HTTP-amp-HTTPS" class="headerlink" title="HTTP &amp; HTTPS"></a>HTTP &amp; HTTPS</h3><ol>
+<li><strong>Malicious iFrames</strong><blockquote>
+<p>An iFrame allows a page from a different domain to be opened inline within the current page.It can be used to launch malicious code.  </p>
+</blockquote>
+</li>
+<li><strong>HTTP 302 cushioning</strong><blockquote>
+<p>Allows a web page to redirect and open in a different URL.Can be used to redirected to malicious code.  </p>
+</blockquote>
+</li>
+<li><strong>Domain shadowing</strong><blockquote>
+<p>Malicious web sites are created from subdomains created from a hijacked domain.  </p>
+</blockquote>
+<h3 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h3></li>
+<li><strong>Attachment-based attacks</strong><blockquote>
+<p>Email with malicious executable files attached.  </p>
+</blockquote>
+</li>
+<li><strong>Email Spoofing</strong><blockquote>
+<p>Phishing(网络诱骗）attack where the message appears to come from a legitimate source.  </p>
+</blockquote>
+</li>
+<li><strong>Spam email</strong><blockquote>
+<p>Unsolicited email with advertisements or malicious content.  </p>
+</blockquote>
+</li>
+<li><strong>Open mail relay server</strong><blockquote>
+<p>Massive amount of spam and worms can be sent by misconfigured email servers.  </p>
+</blockquote>
+</li>
+<li><strong>Homoglyphs</strong><blockquote>
+<p>Phishing scheme where text characters (hyperlinks) look similar to real text and links.  </p>
+</blockquote>
+<h3 id="Web-Exposed-Databases"><a href="#Web-Exposed-Databases" class="headerlink" title="Web-Exposed Databases"></a>Web-Exposed Databases</h3></li>
+<li><strong>Command injection attacks</strong><blockquote>
+<p>Insecure code and web applications allows OS commands to be injected into form fields or the address bar.  </p>
+</blockquote>
+</li>
+<li><strong>XSS Cross-site scripting attacks</strong><blockquote>
+<p>Insecure server-side scripting where the input is not validated allows scripting commands to be inserted into user generated forms fields, like web page comments.This results in visitors being redirected to a malicious website with malware code.  </p>
+</blockquote>
+</li>
+<li><strong>SQL injection attacks</strong><blockquote>
+<p>Insecure server-side scripting allows SQL commands to be inserted into form fields where the input is not validated.  </p>
+</blockquote>
+</li>
+<li><strong>HTTP injection attacks</strong><blockquote>
+<p>Manipulation of html allows executable code to be injected through HTML div tags, etc.  </p>
+</blockquote>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Network-Security/" rel="tag"># Network Security</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/25/2020-Spring-网络授课方式汇总-1/" rel="next" title="2020-Spring 网络授课方式汇总">
+                <i class="fa fa-chevron-left"></i> 2020-Spring 网络授课方式汇总
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">1ampa55ag3</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/1ampa55ag3" target="_blank" title="github">
+                      
+                        <i class="fa fa-fw fa-globe"></i>github</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://matters.news/@1ampa55ag3" target="_blank" title="matters">
+                      
+                        <i class="fa fa-fw fa-globe"></i>matters</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/meizuzhang" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i>weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-1"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">1.1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Computer-Security"><span class="nav-number">1.2.</span> <span class="nav-text">Computer Security</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Three-Key-Objectives"><span class="nav-number">1.3.</span> <span class="nav-text">Three Key Objectives</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Confidentiality"><span class="nav-number">1.3.1.</span> <span class="nav-text">Confidentiality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Integrity"><span class="nav-number">1.3.2.</span> <span class="nav-text">Integrity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Availability"><span class="nav-number">1.3.3.</span> <span class="nav-text">Availability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Additional-concepts"><span class="nav-number">1.3.4.</span> <span class="nav-text">Additional concepts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI-Security-Architecture"><span class="nav-number">1.4.</span> <span class="nav-text">OSI Security Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Aspects-of-Security"><span class="nav-number">1.5.</span> <span class="nav-text">Aspects of Security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Passive-Attack"><span class="nav-number">1.5.1.</span> <span class="nav-text">Passive Attack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Active-Attack"><span class="nav-number">1.5.2.</span> <span class="nav-text">Active Attack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#X-800"><span class="nav-number">1.5.3.</span> <span class="nav-text">X.800</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Model-for-Network-Security"><span class="nav-number">1.6.</span> <span class="nav-text">Model for Network Security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements-of-this-model"><span class="nav-number">1.6.1.</span> <span class="nav-text">Requirements of this model</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Model-for-Network-Access-Security"><span class="nav-number">1.7.</span> <span class="nav-text">Model for Network Access Security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements-of-this-model-1"><span class="nav-number">1.7.1.</span> <span class="nav-text">Requirements of this model</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Standards"><span class="nav-number">1.8.</span> <span class="nav-text">Standards</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cisco-Courses-Network-Attacks-A-Deeper-Look"><span class="nav-number">2.</span> <span class="nav-text">Cisco Courses-Network Attacks : A Deeper Look</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Monitoring-Methods"><span class="nav-number">2.1.</span> <span class="nav-text">Network Monitoring Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Traffic-Information-capture-methods"><span class="nav-number">2.1.1.</span> <span class="nav-text">Traffic Information capture methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-TAPs"><span class="nav-number">2.1.2.</span> <span class="nav-text">Network TAPs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Traffic-Mirroring-and-SPAN"><span class="nav-number">2.1.3.</span> <span class="nav-text">Traffic Mirroring and SPAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-Security-Monitoring-Tools"><span class="nav-number">2.1.4.</span> <span class="nav-text">Network Security Monitoring Tools</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attacking-the-Foundation"><span class="nav-number">2.2.</span> <span class="nav-text">Attacking the Foundation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP-Vulnerabilities"><span class="nav-number">2.2.1.</span> <span class="nav-text">IP Vulnerabilities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-and-UDP-Vulnerabilities"><span class="nav-number">2.2.2.</span> <span class="nav-text">TCP and UDP Vulnerabilities</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attacking-What-We-Do"><span class="nav-number">2.3.</span> <span class="nav-text">Attacking What We Do</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Service-👇"><span class="nav-number">2.4.</span> <span class="nav-text">IP Service 👇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP-Vulnerabilities-gt-ARP-Cache-Poisoning"><span class="nav-number">2.4.1.</span> <span class="nav-text">ARP Vulnerabilities=&gt;ARP Cache Poisoning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-Attacks"><span class="nav-number">2.4.2.</span> <span class="nav-text">DNS Attacks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP-Attack"><span class="nav-number">2.4.3.</span> <span class="nav-text">DHCP Attack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Enterprise-Services👇"><span class="nav-number">2.5.</span> <span class="nav-text">Enterprise Services👇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-amp-HTTPS"><span class="nav-number">2.5.1.</span> <span class="nav-text">HTTP &amp; HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Email"><span class="nav-number">2.5.2.</span> <span class="nav-text">Email</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-Exposed-Databases"><span class="nav-number">2.5.3.</span> <span class="nav-text">Web-Exposed Databases</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">1ampa55ag3</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
